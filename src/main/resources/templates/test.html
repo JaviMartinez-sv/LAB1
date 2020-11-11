@@ -1,0 +1,23 @@
+<html xmlns="http://www.thymeleaf.org">
+
+<body>
+    <h1 th:text="#{Main.idioma}"></h1>
+    <span th:text="#{lang.change}"></span>
+    <select id="languages" onchange="reload();">
+        <option value=""></option>
+        <option value="en" th:text="#{lang.en}"></option>
+        <option value="es" th:text="#{lang.es}"></option>
+    </select>
+
+</body>
+<script>
+    function reload() {
+        var e = document.getElementById("languages");
+        var selectedLang = e.options[e.selectedIndex].value;
+        
+        var url = "?lang=" + selectedLang
+        location.href = url;
+    }
+</script>
+
+</html>
