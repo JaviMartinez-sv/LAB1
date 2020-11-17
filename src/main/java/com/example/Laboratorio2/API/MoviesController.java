@@ -19,12 +19,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MoviesController {
 // Array de todas las peliculas
-    private static ArrayList<Movie> movies = new ArrayList<Movie>(Arrays.asList(
-        new Movie(1, 1997, "La vida es bella"),
-        new Movie(2, 1994, "Forrest Gump"),
-        new Movie(3, 2000, "Gladiator"),
-        new Movie(4, 2001, "Monstruos S.A"),
-        new Movie(5, 1990, "Eduardo Manostijeras")
+    public static ArrayList<Movie> movies = new ArrayList<Movie>(Arrays.asList(
+        new Movie(1, 1997, "Avatar","https://m.media-amazon.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg" ),
+        new Movie(2, 1994, "Forrest Gump","https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg" ),
+        new Movie(3, 2000, "Gladiator", "https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"),
+        new Movie(4, 2001, "Borat", "https://m.media-amazon.com/images/M/MV5BMTk0MTQ3NDQ4Ml5BMl5BanBnXkFtZTcwOTQ3OTQzMw@@._V1_SX300.jpg"),
+        new Movie(5, 1990, "Joker", "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg")
 
     ));
     // Obtengo todas las peliculas
@@ -37,7 +37,7 @@ public class MoviesController {
      
     // Obtengo peliculas por titulo
     @GetMapping("/peliculas/titulo/{title}")
-    public Movie ObtenerPorTitulo(@PathVariable("title") String title){
+    public static Movie ObtenerPorTitulo(@PathVariable("title") String title){
         for(Movie movie : movies){
             if (movie.getTitle().equals(title)){
                 return movie;
@@ -48,7 +48,7 @@ public class MoviesController {
 
     // Obtengo peliculas por año
     @GetMapping("peliculas/año/{year}")
-    public Movie ObtenerPorAño(@PathVariable("year") int year){
+    public static Movie ObtenerPorAño(@PathVariable("year") int year){
         for(Movie movie : movies){
             if (movie.getYear() == year) {
                 return movie;
@@ -57,9 +57,10 @@ public class MoviesController {
         return null;
     }
 
+
     // Crear una pelicula
     @PostMapping("/movie")
-    public Movie createMovie(@RequestBody Movie newMovie){
+    public static Movie createMovie(@RequestBody Movie newMovie){
         for (Movie movie : movies){
             if(movie.getTitle() == newMovie.getTitle()){
                 return null;
@@ -70,7 +71,7 @@ public class MoviesController {
     }
     // Borrar una pelicula
     @DeleteMapping("/movie/delete/{title}")
-    public Movie deleteMovie(@PathVariable("title") String title ){
+    public static Movie deleteMovie(@PathVariable("title") String title ){
         for (Movie movie : movies){
             if(movie.getTitle() == title) {
                 movies.remove(movie);
@@ -80,9 +81,28 @@ public class MoviesController {
         return null;
     }
 
+
+    //METODO FIND BY ID A PARTE
+    public static Movie findById(int id){
+        for(Movie movie : movies){
+            if(movie.getId() == id){
+                return movie;
+            }
+        }
+        return null;
+    }
+
+    //LLAMAR AL METODO FIND BY ID
+    @GetMapping("/moviess/{id}")
+    public Movie MovieById(@PathVariable("id")int id){
+        return  findById(id);
+
+    }
+
+    
     //Modificar una Pelicula
     @PutMapping("/movie/modify/{title}")
-    public Movie modifyMovie(@RequestBody Movie nameTitle, @PathVariable("title") String title){
+    public  static Movie modifyMovie(@RequestBody Movie nameTitle, @PathVariable("title") String title){
         for (Movie movie : movies){
             if(movie.getTitle() == title) {
                 movie.setTitle(title);
@@ -100,6 +120,9 @@ public class MoviesController {
 
         return messages.getString("Main.idioma");
     }
+
+    // Parte 2
+
 
 
 }

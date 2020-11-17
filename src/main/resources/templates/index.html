@@ -1,0 +1,15 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<table>
+    <li th:each="movie : ${movies}" 
+        th:object="${movie}">
+        <img th:src="*{poster}">
+        <span style ="color:blue;" th:text= "*{title}"></span>
+        
+    </li>
+</table>
+
+
+</body>
+
+</html>

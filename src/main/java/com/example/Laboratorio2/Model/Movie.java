@@ -4,10 +4,11 @@ public class Movie {
     public Movie() {
     }
 
-    public Movie(int _id, int _year, String _title) {
+    public Movie(int _id, int _year, String _title, String _poster) {
         this.id = _id;
         this.year = _year;
         this.title = _title;
+        this.poster = _poster;
     }
 
     private int id;
@@ -37,4 +38,13 @@ public class Movie {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    private String poster;
+    public String getPoster(){
+        return poster;
+    }
+    public void setPoster(String poster) {
+        this.poster = poster;
+    }
+
 }
