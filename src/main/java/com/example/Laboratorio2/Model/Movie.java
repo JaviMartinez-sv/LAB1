@@ -1,4 +1,4 @@
-package com.example.Laboratorio1.Model;
+package com.example.Laboratorio2.Model;
 public class Movie {
     
     public Movie() {

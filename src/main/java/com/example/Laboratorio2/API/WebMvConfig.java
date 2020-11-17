@@ -1,4 +1,4 @@
-package com.example.Laboratorio1.API;
+package com.example.Laboratorio2.API;
 
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;

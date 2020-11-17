@@ -1,4 +1,4 @@
-package com.example.Laboratorio1.API;
+package com.example.Laboratorio2.API;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-import com.example.Laboratorio1.Model.Movie;
+import com.example.Laboratorio2.Model.Movie;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
