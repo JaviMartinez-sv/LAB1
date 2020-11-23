@@ -13,5 +13,11 @@ public class HtmlViewController {
         return vista;
     }
 
+    @GetMapping("/html2")
+    public ModelAndView movie() {
+        ModelAndView vista = new ModelAndView("index2");
+        vista.addObject("movies", MoviesController.movies);
+        return vista;
+    }
 
 }

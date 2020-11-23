@@ -4,11 +4,12 @@ public class Movie {
     public Movie() {
     }
 
-    public Movie(int _id, int _year, String _title, String _poster) {
+    public Movie(int _id, int _year, String _title, String _poster, String _description) {
         this.id = _id;
         this.year = _year;
         this.title = _title;
         this.poster = _poster;
+        this.description = _description;
     }
 
     private int id;
@@ -47,4 +48,11 @@ public class Movie {
         this.poster = poster;
     }
 
+    private String description;
+    public String getDescription(){
+        return description;
+    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

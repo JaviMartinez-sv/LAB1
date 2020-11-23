@@ -1,0 +1,23 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Pelicula Avatar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">                                                                                                                                     
+</head>
+<body>
+        <div class="container">
+            <div class="page-header" id="banner">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="well sponsor" th:each="movie : ${movies[0]}" th:object="${movie}">
+                            <span style="float: left; margin-right: 15px;"><img th:src="*{poster}" width="170" height="250"></span>
+                            <h3 style="margin-bottom: 0.4em;" th:text= "*{title}"></h3>
+                            <div th:text= "*{year}"></div></br>
+                            <p th:text="*{description}"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+</body>
+</html>
