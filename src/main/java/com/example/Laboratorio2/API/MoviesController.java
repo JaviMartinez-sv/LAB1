@@ -82,7 +82,7 @@ public class MoviesController {
     }
 
 
-    //METODO FIND BY ID A PARTE
+    // Metodo findbyid
     public static Movie findById(int id){
         for(Movie movie : movies){
             if(movie.getId() == id){
@@ -92,14 +92,14 @@ public class MoviesController {
         return null;
     }
 
-    //LLAMAR AL METODO FIND BY ID
+    // Llamo al metodo findbyid
     @GetMapping("/moviess/{id}")
     public Movie MovieById(@PathVariable("id")int id){
         return  findById(id);
 
     }
 
-    
+
     //Modificar una Pelicula
     @PutMapping("/movie/modify/{title}")
     public  static Movie modifyMovie(@RequestBody Movie nameTitle, @PathVariable("title") String title){
@@ -121,7 +121,6 @@ public class MoviesController {
         return messages.getString("Main.idioma");
     }
 
-    // Parte 2
 
 
 
