@@ -39,7 +39,7 @@ public class Movie {
     public void setTitle(String title) {
         this.title = title;
     }
-
+    // Añado poster
     private String poster;
     public String getPoster(){
         return poster;
@@ -47,7 +47,7 @@ public class Movie {
     public void setPoster(String poster) {
         this.poster = poster;
     }
-
+    // Añado description
     private String description;
     public String getDescription(){
         return description;

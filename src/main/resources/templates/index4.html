@@ -3,22 +3,22 @@
     <title>Peliculas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link th:href="@{/css/estilos.css}" rel="stylesheet" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/> 
 </head>
 <body>
     <div class="col-sm-12">
-        <div class="card col-sm-4" th:each="movie : ${movies}" th:object="${movie}">
+        <div class="card col-sm-4" th:each="movie : ${movies}" th:object="${movie}"> <!-- Recorro peliculas -->
           <div class="image">
-            <img th:src="@{|*{poster}|}"/>
+            <img th:src="@{|*{poster}|}"/> <!-- Obtengo la imagen por id -->
           </div>
           <div class="card-inner">
             <div class="header">
-              <h2><b th:text= "*{title}"></b></h2>
-              <h3 style ="color:blue;" th:text= "*{year}"></h3>
-              <h4 style ="color:red;" th:text="*{year} == 2020 ? '¡ Novedad !'"> ¡ novedad 2020 ! </h4></br>
+              <h2><b th:text= "*{title}"></b></h2> <!-- Obtengo el titulo  -->
+              <h3 style ="color:blue;" th:text= "*{year}"></h3> <!-- Obtengo el año -->
+              <h4 style ="color:red;" th:text="*{year} == 2020 ? '¡ Novedad !'"> ¡ novedad 2020 ! </h4></br> <!-- Uso de if en th  -->
           </div>
           <div class="content">
-            <p th:text="*{description}"></p>
+            <p th:text="*{description}"></p> <!-- Obtengo la descripcion  -->
           </div>
             </div>
         </div>

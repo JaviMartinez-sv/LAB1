@@ -8,6 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HtmlViewController {
     
+    // Vista para el index3
     @GetMapping("/html")
     public ModelAndView movies() {
         ModelAndView vista = new ModelAndView("index3");
@@ -16,7 +17,7 @@ public class HtmlViewController {
     }
 
 
-
+    // Vista para el index4
     @GetMapping("/html/{id}")
    public ModelAndView movie(@PathVariable("id") int id) {
       ModelAndView vista = new ModelAndView("index4");

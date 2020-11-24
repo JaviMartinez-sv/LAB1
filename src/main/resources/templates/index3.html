@@ -2,19 +2,19 @@
 <head>
     <title>Peliculas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link th:href="@{/css/estilos.css}" rel="stylesheet" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <link th:href="@{/css/estilos.css}" rel="stylesheet" />  <!-- Añado th para añadir estilos -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/> <!-- Añado bootstrap -->
 </head>
 <body>
     <div class="col-sm-12">
-        <div class="card col-sm-4" th:each="movie : ${movies}" th:object="${movie}"> 
+        <div class="card col-sm-4" th:each="movie : ${movies}" th:object="${movie}"> <!-- Recorro peliculas -->
           <div class="image">
-            <img th:src="*{poster}"/>
+            <img th:src="*{poster}"/> <!-- Obtengo todas las imagenes -->
           </div>
           <div class="card-inner">
             <div class="header">
-              <h2><a th:href="@{|/html/*{id}|}" th:text= "*{title}"></a></h2>
-              <h3 style ="color:blue;" th:text= "*{year}"></h3>
+              <h2><a th:href="@{|/html/*{id}|}" th:text= "*{title}"></a></h2> <!-- Uso th:href para crear un hipervinculo a una pelicula en concreto -->
+              <h3 style ="color:blue;" th:text= "*{year}"></h3> <!-- Obtengo el año de cada pelicula -->
             </div>
           </div>
         </div>
