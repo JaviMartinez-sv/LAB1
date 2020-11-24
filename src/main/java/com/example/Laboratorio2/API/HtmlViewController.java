@@ -10,7 +10,7 @@ public class HtmlViewController {
     
     @GetMapping("/html")
     public ModelAndView movies() {
-        ModelAndView vista = new ModelAndView("index");
+        ModelAndView vista = new ModelAndView("index3");
         vista.addObject("movies", MoviesController.movies);
         return vista;
     }
@@ -19,7 +19,7 @@ public class HtmlViewController {
 
     @GetMapping("/html/{id}")
    public ModelAndView movie(@PathVariable("id") int id) {
-      ModelAndView vista = new ModelAndView("index2");
+      ModelAndView vista = new ModelAndView("index4");
       vista.addObject("movies", MoviesController.findById(id));
       return vista;
 
