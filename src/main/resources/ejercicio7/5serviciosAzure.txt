@@ -1,0 +1,44 @@
+1.	Azure Cosmos DB ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Azure Cosmos DB es un servicio de base de datos de varios modelos distribuido globalmente. Puede escalar de forma elástica e independiente el rendimiento y
+el almacenamiento en cualquier número de regiones de Azure de todo el mundo. Puede aprovechar un acceso rápido y en milisegundos de un solo dígito a los datos mediante
+cualquiera de las diversas API populares. 
+
+Azure Cosmos DB proporciona de forma exclusiva contratos de nivel de servicio completos para garantizar el rendimiento, la latencia, la disponibilidad y la coherencia.
+
+Azure Cosmos DB es compatible con los datos sin esquema, lo que le permite compilar aplicaciones "AlwaysOn" con una gran capacidad de respuesta para admitir datos en continuo cambio.
+Puede usar esta característica para almacenar datos actualizados y mantenidos por usuarios de todo el mundo.
+
+Azure Cosmos DB es flexible. En el nivel más bajo, Azure Cosmos DB almacena los datos en formato de secuencia de registro de átomos (ARS). Después, los datos se abstraen y se
+proyectan como una API, que se especifica al crear la base de datos. Entre las opciones se incluyen SQL, MongoDB, Cassandra, Tables y Gremlin. Este nivel de flexibilidad implica que,
+al migrar las bases de datos de la empresa a Azure Cosmos DB, los desarrolladores pueden seguir con la API con la que se encuentren más cómodos.
+
+2.	Azure SynapseAnalytics -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Azure SynapseAnalytics  (anteriormente Azure SQL Data Warehouse) es un servicio de análisis ilimitado que reúne el almacenamiento de datos empresariales y el análisis de macrodatos.
+Puede consultar los datos como prefiera mediante recursos sin servidor o aprovisionados a escala. Tiene una experiencia unificada para ingerir, preparar, administrar y servir datos
+para las necesidades inmediatas de inteligencia empresarial y aprendizaje automático.
+
+
+
+3.	HDInsight de Azure ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Es un servicio de análisis de código abierto totalmente administrado para empresas además de un servicio en la nube que hace que sea más fácil, rápido y rentable procesar grandes
+cantidades de datos. Puede ejecutar marcos de código abierto populares y crear tipos de clúster, como Apache Spark , Apache Hadoop ,Apache Kafka, Apache HBase , Apache Storm  y
+Machine LearningServices .
+
+HDInsight también admite una amplia gama de escenarios, como la extracción, la transformación y la carga de datos (ETL), el almacenamiento de datos, el aprendizaje automático e IoT.
+
+4.	Azure Databricks ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Azure Databricks  le ayuda a descubrir información de todos los datos y a crear soluciones de inteligencia artificial. Puede configurar el entorno de Apache Spark en minutos y,
+después, escalar automáticamente y colaborar en proyectos compartidos en un área de trabajo interactiva. Azure Databricks admite Python, Scala, R, Java y SQL, así como marcos y 
+bibliotecas de ciencia de datos, como TensorFlow, PyTorch y Scikit-learn.
+
+5.	Azure APP Services ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Azure App Service es un servicio basado en HTTP para hospedar aplicaciones web, API REST y back-ends para dispositivos móviles. Puede desarrollarlo en su lenguaje preferido,
+ya sea. NET, .NET Core, Java, Ruby, Node.js, PHP o Python. Las aplicaciones se ejecutan y escalan fácilmente en los entornos basados tanto en Windows como en Linux.
+App Service no solo agrega a la aplicación la funcionalidad de Microsoft Azure, como la seguridad, el equilibrio de carga, el escalado automático y la administración automatizada.
+También puede sacar partido de sus funcionalidades de DevOps, por ejemplo, la implementación continua desde Azure DevOps, GitHub, Docker Hub y otros orígenes, la administración de
+paquetes, entornos de ensayo, dominio personalizado y certificados TLS/SSL.
+Con App Service, se paga por los recursos de proceso de Azure que se utilizan. Los recursos de proceso que usa se determinan mediante el plan de App Service en el que ejecuta las
+aplicaciones.
